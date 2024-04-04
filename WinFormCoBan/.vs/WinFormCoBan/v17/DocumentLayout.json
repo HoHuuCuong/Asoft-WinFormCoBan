@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\Asoft\\WinFormCoBan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D93AED2F-283B-49AA-8224-98CBE7BE33C0}|WinFormCoBan\\WinFormCoBan.csproj|D:\\Asoft\\WinFormCoBan\\winformcoban\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D93AED2F-283B-49AA-8224-98CBE7BE33C0}|WinFormCoBan\\WinFormCoBan.csproj|d:\\asoft\\winformcoban\\winformcoban\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D93AED2F-283B-49AA-8224-98CBE7BE33C0}|WinFormCoBan\\WinFormCoBan.csproj|solutionrelative:winformcoban\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D93AED2F-283B-49AA-8224-98CBE7BE33C0}|WinFormCoBan\\WinFormCoBan.csproj|D:\\Asoft\\WinFormCoBan\\winformcoban\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D93AED2F-283B-49AA-8224-98CBE7BE33C0}|WinFormCoBan\\WinFormCoBan.csproj|solutionrelative:winformcoban\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D93AED2F-283B-49AA-8224-98CBE7BE33C0}|WinFormCoBan\\WinFormCoBan.csproj|d:\\asoft\\winformcoban\\winformcoban\\thuchien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D93AED2F-283B-49AA-8224-98CBE7BE33C0}|WinFormCoBan\\WinFormCoBan.csproj|D:\\Asoft\\WinFormCoBan\\winformcoban\\thuchien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D93AED2F-283B-49AA-8224-98CBE7BE33C0}|WinFormCoBan\\WinFormCoBan.csproj|solutionrelative:winformcoban\\thuchien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D93AED2F-283B-49AA-8224-98CBE7BE33C0}|WinFormCoBan\\WinFormCoBan.csproj|D:\\Asoft\\WinFormCoBan\\winformcoban\\thuchien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D93AED2F-283B-49AA-8224-98CBE7BE33C0}|WinFormCoBan\\WinFormCoBan.csproj|solutionrelative:winformcoban\\thuchien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D93AED2F-283B-49AA-8224-98CBE7BE33C0}|WinFormCoBan\\WinFormCoBan.csproj|D:\\Asoft\\WinFormCoBan\\winformcoban\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D93AED2F-283B-49AA-8224-98CBE7BE33C0}|WinFormCoBan\\WinFormCoBan.csproj|solutionrelative:winformcoban\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,13 +30,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ThucHien.cs",
               "DocumentMoniker": "D:\\Asoft\\WinFormCoBan\\WinFormCoBan\\ThucHien.cs",
               "RelativeDocumentMoniker": "WinFormCoBan\\ThucHien.cs",
               "ToolTip": "D:\\Asoft\\WinFormCoBan\\WinFormCoBan\\ThucHien.cs",
               "RelativeToolTip": "WinFormCoBan\\ThucHien.cs",
-              "ViewState": "AQIAAO8AAAAAAAAAAAAAAP4AAAAAAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAAPwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T02:53:27.151Z",
               "IsPinned": true,
@@ -44,14 +44,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ThucHien.cs [Design]",
               "DocumentMoniker": "D:\\Asoft\\WinFormCoBan\\WinFormCoBan\\ThucHien.cs",
               "RelativeDocumentMoniker": "WinFormCoBan\\ThucHien.cs",
               "ToolTip": "D:\\Asoft\\WinFormCoBan\\WinFormCoBan\\ThucHien.cs [Design]",
               "RelativeToolTip": "WinFormCoBan\\ThucHien.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T02:50:13.512Z"
+              "WhenOpened": "2024-04-04T02:50:13.512Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -61,14 +62,14 @@
               "RelativeDocumentMoniker": "WinFormCoBan\\Main.cs",
               "ToolTip": "D:\\Asoft\\WinFormCoBan\\WinFormCoBan\\Main.cs",
               "RelativeToolTip": "WinFormCoBan\\Main.cs",
-              "ViewState": "AQIAAHsAAAAAAAAAAADgv4EAAAAAAAAA",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAswG8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T02:32:40.039Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Main.cs [Design]",
               "DocumentMoniker": "D:\\Asoft\\WinFormCoBan\\WinFormCoBan\\Main.cs",
               "RelativeDocumentMoniker": "WinFormCoBan\\Main.cs",

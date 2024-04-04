@@ -49,7 +49,7 @@
             this.btnDong.TabIndex = 8;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            this.btnDong.Click += new System.EventHandler(this.CloseApp);
             // 
             // dataGridView1
             // 
@@ -71,7 +71,7 @@
             this.btnThucHien.TabIndex = 6;
             this.btnThucHien.Text = "Thực hiện";
             this.btnThucHien.UseVisualStyleBackColor = true;
-            this.btnThucHien.Click += new System.EventHandler(this.btnThucHien_Click);
+            this.btnThucHien.Click += new System.EventHandler(this.ShowAction);
             // 
             // contextMenuStrip1
             // 
@@ -82,35 +82,35 @@
             this.xóaToolStripMenuItem1,
             this.xemToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 128);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(116, 100);
             // 
             // thêmToolStripMenuItem1
             // 
             this.thêmToolStripMenuItem1.Name = "thêmToolStripMenuItem1";
             this.thêmToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
             this.thêmToolStripMenuItem1.Text = "Thêm";
-            this.thêmToolStripMenuItem1.Click += new System.EventHandler(this.thêmToolStripMenuItem1_Click);
+            this.thêmToolStripMenuItem1.Click += new System.EventHandler(this.CreateUser);
             // 
             // sửaToolStripMenuItem1
             // 
             this.sửaToolStripMenuItem1.Name = "sửaToolStripMenuItem1";
             this.sửaToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
             this.sửaToolStripMenuItem1.Text = "Sửa";
-            this.sửaToolStripMenuItem1.Click += new System.EventHandler(this.sửaToolStripMenuItem1_Click);
+            this.sửaToolStripMenuItem1.Click += new System.EventHandler(this.UpdateUser);
             // 
             // xóaToolStripMenuItem1
             // 
             this.xóaToolStripMenuItem1.Name = "xóaToolStripMenuItem1";
             this.xóaToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
             this.xóaToolStripMenuItem1.Text = "Xóa";
-            this.xóaToolStripMenuItem1.Click += new System.EventHandler(this.xóaToolStripMenuItem1_Click);
+            this.xóaToolStripMenuItem1.Click += new System.EventHandler(this.DeleteUser);
             // 
             // xemToolStripMenuItem
             // 
             this.xemToolStripMenuItem.Name = "xemToolStripMenuItem";
             this.xemToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.xemToolStripMenuItem.Text = "Xem";
-            this.xemToolStripMenuItem.Click += new System.EventHandler(this.xemToolStripMenuItem_Click);
+            this.xemToolStripMenuItem.Click += new System.EventHandler(this.ViewUser);
             // 
             // Main
             // 

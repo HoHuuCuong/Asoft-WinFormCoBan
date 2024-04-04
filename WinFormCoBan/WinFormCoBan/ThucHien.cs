@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static WinFormCoBan.Main;
 
 namespace WinFormCoBan
 {
@@ -25,7 +26,7 @@ namespace WinFormCoBan
         public string email;
         public string passWord;
         public string conFirmPassWord;
-        public string flag;
+        public ActionMode flag;
         public ThucHien()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace WinFormCoBan
             //connection = new SqlConnection(chuoiketnoi);
             //connection.Open();
         }
-        public ThucHien(Main main, string userID, string userName, string email, string tel,string pass, string flag)
+        public ThucHien(Main main, string userID, string userName, string email, string tel,string pass, ActionMode flag)
         {
 
             InitializeComponent();         
@@ -60,10 +61,10 @@ namespace WinFormCoBan
         {
             switch (flag)
             {
-                case "them":
+                case ActionMode.Create:
                   
                     break;
-                case "sua":
+                case ActionMode.Update:
                     txtID.Text = userID;
                     txtID.ReadOnly = true;
                     txtName.Text = userName;
@@ -73,7 +74,7 @@ namespace WinFormCoBan
                     txtConfirmPass.Text = conFirmPassWord;
                     btnNhapTiep.Visible = false;
                     break;
-                case "xem":
+                case ActionMode.View:
                     txtID.Text = userID;
                     txtID.ReadOnly = true;
                     txtName.Text = userName;
@@ -95,8 +96,44 @@ namespace WinFormCoBan
             }
 
         }
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
-        private void btnLuu_Click(object sender, EventArgs e)
+        private bool CheckUserID(string userID)
+        {
+            bool check = false;
+            string query = "SELECT COUNT(*) FROM Test WHERE UserID = @UserID";
+            // Tạo đối tượng SqlCommand
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                // Thêm tham số cho câu truy vấn
+                command.Parameters.AddWithValue("@UserID", userID);
+
+                // Thực hiện truy vấn và lấy kết quả
+                int count = (int)command.ExecuteScalar();
+
+                // Kiểm tra nếu có tồn tại mã người dùng trong cơ sở dữ liệu
+                if (count > 0)
+                {
+                    check = true;
+                }
+
+            }
+
+            return check;
+        }
+
+        private void SaveData(object sender, EventArgs e)
         {
             userID = txtID.Text;
             userName = txtName.Text;
@@ -105,11 +142,11 @@ namespace WinFormCoBan
             passWord = txtPass.Text;
             conFirmPassWord = txtConfirmPass.Text;
             command = connection.CreateCommand();
-            int rowsAffected=0;
+            int rowsAffected = 0;
             switch (flag)
             {
-                case "them":
-                   
+                case ActionMode.Create:
+
 
                     if (string.IsNullOrEmpty(userID))
                     {
@@ -160,10 +197,10 @@ namespace WinFormCoBan
                             return;
                         }
                     }
-               
+
                     command.CommandText =
                     "insert into Test values('" + userID + "', '" + userName + "','" + passWord + "','" + email + "','" + tel + "',0)";
-                     rowsAffected = command.ExecuteNonQuery();
+                    rowsAffected = command.ExecuteNonQuery();
                     main.loadData();
                     if (rowsAffected > 0)
                     {
@@ -176,10 +213,10 @@ namespace WinFormCoBan
                     main.loadData();
                     this.Close();
                     break;
-                case "sua":
+                case ActionMode.Update:
                     command.CommandText = command.CommandText =
                      "UPDATE Test SET UserName = '" + userName + "', Password = '" + passWord + "', Email = '" + email + "', Tel = '" + tel + "' WHERE UserID = '" + userID + "'";
-                     rowsAffected = command.ExecuteNonQuery();
+                    rowsAffected = command.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Dữ liệu đã được cập nhật thành công.");
@@ -191,52 +228,16 @@ namespace WinFormCoBan
                     main.loadData();
                     this.Close();
                     break;
-                case "xem":
-                   
+                case ActionMode.View:
+
                     break;
                 default:
 
                     break;
             }
         }
-        private bool IsValidEmail(string email)
-        {
-            try
-            {
-                var addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == email;
-            }
-            catch
-            {
-                return false;
-            }
-        }
 
-        private bool CheckUserID(string userID)
-        {
-            bool check = false;
-            string query = "SELECT COUNT(*) FROM Test WHERE UserID = @UserID";
-            // Tạo đối tượng SqlCommand
-            using (SqlCommand command = new SqlCommand(query, connection))
-            {
-                // Thêm tham số cho câu truy vấn
-                command.Parameters.AddWithValue("@UserID", userID);
-
-                // Thực hiện truy vấn và lấy kết quả
-                int count = (int)command.ExecuteScalar();
-
-                // Kiểm tra nếu có tồn tại mã người dùng trong cơ sở dữ liệu
-                if (count > 0)
-                {
-                    check = true;
-                }
-
-            }
-
-            return check;
-        }
-
-        private void btnNhapTiep_Click(object sender, EventArgs e)
+        private void Clear(object sender, EventArgs e)
         {
             txtID.Clear();
             txtName.Clear();
@@ -246,7 +247,7 @@ namespace WinFormCoBan
             txtConfirmPass.Clear();
         }
 
-        private void btnDong_Click(object sender, EventArgs e)
+        private void Close(object sender, EventArgs e)
         {
             this.Close();
         }

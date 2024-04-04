@@ -64,7 +64,7 @@
             this.btnDong.TabIndex = 30;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            this.btnDong.Click += new System.EventHandler(this.Close);
             // 
             // btnLuu
             // 
@@ -74,7 +74,7 @@
             this.btnLuu.TabIndex = 29;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.btnLuu.Click += new System.EventHandler(this.SaveData);
             // 
             // btnNhapTiep
             // 
@@ -84,7 +84,7 @@
             this.btnNhapTiep.TabIndex = 28;
             this.btnNhapTiep.Text = "Nhập tiếp";
             this.btnNhapTiep.UseVisualStyleBackColor = true;
-            this.btnNhapTiep.Click += new System.EventHandler(this.btnNhapTiep_Click);
+            this.btnNhapTiep.Click += new System.EventHandler(this.Clear);
             // 
             // txtEmail
             // 

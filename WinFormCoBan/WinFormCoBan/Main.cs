@@ -38,7 +38,13 @@ namespace WinFormCoBan
             InitializeComponent();
            this.main = main;
         }
-
+        public enum ActionMode
+        {
+            Create,
+            Update,
+            Delete,
+            View
+        }
         public void loadData()
         {
             command = connection.CreateCommand();
@@ -48,17 +54,6 @@ namespace WinFormCoBan
             adapter.Fill(table);
             dataGridView1.DataSource = table;
             dataGridView1.ClearSelection();
-        }
-
-        private void btnThucHien_Click(object sender, EventArgs e)
-        {
-            contextMenuStrip1.Show(btnThucHien, new Point(50, 50));
-
-        }
-
-        private void btnDong_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -92,14 +87,14 @@ namespace WinFormCoBan
 
         }
 
-        private void thêmToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void CreateUser(object sender, EventArgs e)
         {
-            flag="them";
-            ThucHien thucHien = new ThucHien(this, userID, userName, email, tel,pass,flag);
+            ActionMode flag = ActionMode.Create;
+            ThucHien thucHien = new ThucHien(this, userID, userName, email, tel, pass, flag);
             thucHien.ShowDialog();
         }
 
-        private void sửaToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void UpdateUser(object sender, EventArgs e)
         {
             if (userID == null)
             {
@@ -107,28 +102,13 @@ namespace WinFormCoBan
             }
             else
             {
-                flag = "sua";
-                ThucHien thucHien = new ThucHien(this, userID, userName, email, tel,pass, flag);
-                thucHien.ShowDialog();
-            }
-           
-        }
-
-        private void xemToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (userID == null)
-            {
-                MessageBox.Show("Vui lòng chọn một hàng trong bảng.");
-            }
-            else
-            {
-                flag = "xem";
+                ActionMode flag = ActionMode.Update;
                 ThucHien thucHien = new ThucHien(this, userID, userName, email, tel, pass, flag);
                 thucHien.ShowDialog();
             }
         }
 
-        private void xóaToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void DeleteUser(object sender, EventArgs e)
         {
             if (userID == null)
             {
@@ -146,6 +126,32 @@ namespace WinFormCoBan
                     loadData();
                 }
             }
+
+        }
+
+        private void ViewUser(object sender, EventArgs e)
+        {
+                if (userID == null)
+                {
+                    MessageBox.Show("Vui lòng chọn một hàng trong bảng.");
+                }
+                else
+                {
+                ActionMode flag = ActionMode.View;
+                ThucHien thucHien = new ThucHien(this, userID, userName, email, tel, pass, flag);
+                    thucHien.ShowDialog();
+                }
+            }
+
+        private void ShowAction(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Show(btnThucHien, new Point(50, 50));
+        }
+
+        private void CloseApp(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
+
 }
