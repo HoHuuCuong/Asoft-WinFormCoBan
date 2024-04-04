@@ -1,0 +1,11 @@
+D:\Asoft\WinFormCoBan\WinFormCoBan\bin\Debug\WinFormCoBan.exe.config
+D:\Asoft\WinFormCoBan\WinFormCoBan\bin\Debug\WinFormCoBan.exe
+D:\Asoft\WinFormCoBan\WinFormCoBan\bin\Debug\WinFormCoBan.pdb
+D:\Asoft\WinFormCoBan\WinFormCoBan\obj\Debug\WinFormCoBan.csproj.AssemblyReference.cache
+D:\Asoft\WinFormCoBan\WinFormCoBan\obj\Debug\WinFormCoBan.Main.resources
+D:\Asoft\WinFormCoBan\WinFormCoBan\obj\Debug\WinFormCoBan.Properties.Resources.resources
+D:\Asoft\WinFormCoBan\WinFormCoBan\obj\Debug\WinFormCoBan.csproj.GenerateResource.cache
+D:\Asoft\WinFormCoBan\WinFormCoBan\obj\Debug\WinFormCoBan.csproj.CoreCompileInputs.cache
+D:\Asoft\WinFormCoBan\WinFormCoBan\obj\Debug\WinFormCoBan.exe
+D:\Asoft\WinFormCoBan\WinFormCoBan\obj\Debug\WinFormCoBan.pdb
+D:\Asoft\WinFormCoBan\WinFormCoBan\obj\Debug\WinFormCoBan.ThucHien.resources
