@@ -127,5 +127,25 @@ namespace WinFormCoBan
                 thucHien.ShowDialog();
             }
         }
+
+        private void xóaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (userID == null)
+            {
+                MessageBox.Show("Vui lòng chọn một hàng để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Bạn có muốn xóa không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    command = connection.CreateCommand();
+                    command.CommandText = command.CommandText = "delete from Test where userid='" + userID + "'";
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Xóa thành công.");
+                    loadData();
+                }
+            }
+        }
     }
 }

@@ -103,6 +103,7 @@
             this.xóaToolStripMenuItem1.Name = "xóaToolStripMenuItem1";
             this.xóaToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
             this.xóaToolStripMenuItem1.Text = "Xóa";
+            this.xóaToolStripMenuItem1.Click += new System.EventHandler(this.xóaToolStripMenuItem1_Click);
             // 
             // xemToolStripMenuItem
             // 
